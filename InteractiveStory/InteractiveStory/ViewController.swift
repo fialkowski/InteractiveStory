@@ -10,25 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let story = Page(story: .touchDown)
-        
-        story.firstChoice = (title: "someTitle", page: Page(story: .droid))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startAdventure" {
-            if let pageController = segue.destination as? PageController {
-                pageController.page = Adventure.story
-            } else {
-                return
-            }
             
+            do {
+                if let name = nameTextField.text {
+                    if name == "" {
+                        throw AdventureError.nameIsNotProvided
+                    } else {
+                        if let pageController = segue.destination as? PageController {
+                            pageController.page = Adventure.story(withName: name)
+                        } else {
+                            return
+                        }
+                    }
+                }
+            } catch AdventureError.nameIsNotProvided {
+                let alertController = UIAlertController(title: "Name not Provided", message: "Provide a name to start the Story", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(action)
+                present(alertController, animated: true, completion: nil)
+            } catch let error {
+                fatalError("\(error.localizedDescription)")
+            }
+            }
         }
     }
 
-
-}
 
