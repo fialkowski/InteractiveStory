@@ -15,6 +15,10 @@
 		8AE18B442229FC950066EFC6 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE18B432229FC950066EFC6 /* Story.swift */; };
 		8AE18B46222A03F50066EFC6 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE18B45222A03F50066EFC6 /* Page.swift */; };
 		8AE18B48222A32740066EFC6 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE18B47222A32740066EFC6 /* PageController.swift */; };
+		8AE18B4D222C9ADB0066EFC6 /* HappyEnding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AE18B4A222C9ADA0066EFC6 /* HappyEnding.wav */; };
+		8AE18B4E222C9ADB0066EFC6 /* Ominous.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AE18B4B222C9ADB0066EFC6 /* Ominous.wav */; };
+		8AE18B4F222C9ADB0066EFC6 /* PageTurn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AE18B4C222C9ADB0066EFC6 /* PageTurn.wav */; };
+		8AE18B51222C9B560066EFC6 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE18B50222C9B560066EFC6 /* Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		8AE18B432229FC950066EFC6 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		8AE18B45222A03F50066EFC6 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8AE18B47222A32740066EFC6 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		8AE18B4A222C9ADA0066EFC6 /* HappyEnding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HappyEnding.wav; sourceTree = "<group>"; };
+		8AE18B4B222C9ADB0066EFC6 /* Ominous.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ominous.wav; sourceTree = "<group>"; };
+		8AE18B4C222C9ADB0066EFC6 /* PageTurn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PageTurn.wav; sourceTree = "<group>"; };
+		8AE18B50222C9B560066EFC6 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		8AE18B302229F3140066EFC6 /* InteractiveStory */ = {
 			isa = PBXGroup;
 			children = (
+				8AE18B50222C9B560066EFC6 /* Audio.swift */,
 				8AE18B312229F3140066EFC6 /* AppDelegate.swift */,
 				8AE18B332229F3140066EFC6 /* ViewController.swift */,
 				8AE18B352229F3140066EFC6 /* Main.storyboard */,
@@ -68,9 +77,20 @@
 				8AE18B3D2229F3180066EFC6 /* Info.plist */,
 				8AE18B432229FC950066EFC6 /* Story.swift */,
 				8AE18B45222A03F50066EFC6 /* Page.swift */,
+				8AE18B49222C9A930066EFC6 /* Resources */,
 				8AE18B47222A32740066EFC6 /* PageController.swift */,
 			);
 			path = InteractiveStory;
+			sourceTree = "<group>";
+		};
+		8AE18B49222C9A930066EFC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AE18B4A222C9ADA0066EFC6 /* HappyEnding.wav */,
+				8AE18B4B222C9ADB0066EFC6 /* Ominous.wav */,
+				8AE18B4C222C9ADB0066EFC6 /* PageTurn.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +151,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE18B4E222C9ADB0066EFC6 /* Ominous.wav in Resources */,
 				8AE18B3C2229F3180066EFC6 /* LaunchScreen.storyboard in Resources */,
 				8AE18B392229F3180066EFC6 /* Assets.xcassets in Resources */,
+				8AE18B4D222C9ADB0066EFC6 /* HappyEnding.wav in Resources */,
+				8AE18B4F222C9ADB0066EFC6 /* PageTurn.wav in Resources */,
 				8AE18B372229F3140066EFC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE18B51222C9B560066EFC6 /* Audio.swift in Sources */,
 				8AE18B342229F3140066EFC6 /* ViewController.swift in Sources */,
 				8AE18B322229F3140066EFC6 /* AppDelegate.swift in Sources */,
 				8AE18B46222A03F50066EFC6 /* Page.swift in Sources */,
